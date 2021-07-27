@@ -1,0 +1,14 @@
+main.c:120:5:main	120	static
+main.c:541:6:TIM_AB_Config	48	static
+main.c:574:6:TIM_AB_Start	0	static
+main.c:584:6:TIM_AB_Stop	0	static
+main.c:638:6:TIM_AL_Start	8	static
+main.c:651:6:TIM_AL_Stop	8	static
+main.c:790:6:RTC_DateTimeRegulate	48	static
+main.c:862:10:DWT_GetTickUS	16	static
+main.c:879:6:SerializeToMsg	0	static
+main.c:889:6:EnterDFU	16	static,ignoring_inline_asm
+main.c:954:6:HAL_GPIO_EXTI_Callback	0	static
+main.c:1045:6:HAL_TIM_PeriodElapsedCallback	0	static
+main.c:1069:6:HAL_TIM_OC_DelayElapsedCallback	16	static
+main.c:1111:6:Error_Handler	0	static

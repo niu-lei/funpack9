@@ -1,0 +1,8 @@
+SensorTile.box_env_sensors_ex.c:49:9:BSP_ENV_SENSOR_Enable_DRDY_Interrupt	8	static
+SensorTile.box_env_sensors_ex.c:98:9:BSP_ENV_SENSOR_Set_PowerMode	8	static
+SensorTile.box_env_sensors_ex.c:140:9:BSP_ENV_SENSOR_Set_FilterMode	8	static
+SensorTile.box_env_sensors_ex.c:180:9:BSP_ENV_SENSOR_Set_One_Shot	8	static
+SensorTile.box_env_sensors_ex.c:229:9:BSP_ENV_SENSOR_Get_One_Shot_Status	8	static
+SensorTile.box_env_sensors_ex.c:280:9:BSP_ENV_SENSOR_Get_DRDY_Status	8	static
+SensorTile.box_env_sensors_ex.c:383:9:BSP_ENV_SENSOR_Read_Register	8	static
+SensorTile.box_env_sensors_ex.c:443:9:BSP_ENV_SENSOR_Write_Register	8	static

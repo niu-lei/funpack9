@@ -1,0 +1,7 @@
+vcom.c:78:5:VCOM_init	8	static
+vcom.c:104:5:VCOM_deinit	8	static
+vcom.c:121:19:VCOM_receive_MSG	32	static
+vcom.c:267:19:VCOM_send_MSG	16	static
+vcom.c:326:19:VCOM_send_FFT	552	static
+vcom.c:380:10:VCOM_read	16	static
+vcom.c:426:10:VCOM_write	16	static

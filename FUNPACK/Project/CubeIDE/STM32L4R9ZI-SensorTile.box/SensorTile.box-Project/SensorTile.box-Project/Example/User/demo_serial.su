@@ -1,0 +1,9 @@
+demo_serial.c:129:6:BUILD_REPLY_HEADER	0	static
+demo_serial.c:141:6:INIT_STREAMING_HEADER	0	static
+demo_serial.c:154:6:INIT_STREAMING_MSG	8	static
+demo_serial.c:174:5:HandleMSG	32	static
+demo_serial.c:579:6:Init_Error	0	static
+demo_serial.c:590:6:Report_Error	32	static
+demo_serial.c:624:6:Report_Init_Error	4	static
+demo_serial.c:643:6:Get_Init_Error	0	static
+demo_serial.c:654:6:SendMSG	0	static

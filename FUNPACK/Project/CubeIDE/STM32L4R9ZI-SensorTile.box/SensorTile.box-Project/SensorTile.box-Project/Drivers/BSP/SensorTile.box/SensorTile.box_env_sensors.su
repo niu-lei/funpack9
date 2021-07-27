@@ -1,0 +1,9 @@
+SensorTile.box_env_sensors.c:68:9:BSP_ENV_SENSOR_Init	80	static
+SensorTile.box_env_sensors.c:183:9:BSP_ENV_SENSOR_DeInit	8	static
+SensorTile.box_env_sensors.c:209:9:BSP_ENV_SENSOR_GetCapabilities	8	static
+SensorTile.box_env_sensors.c:235:9:BSP_ENV_SENSOR_ReadID	8	static
+SensorTile.box_env_sensors.c:264:9:BSP_ENV_SENSOR_Enable	8	static
+SensorTile.box_env_sensors.c:303:9:BSP_ENV_SENSOR_Disable	8	static
+SensorTile.box_env_sensors.c:343:9:BSP_ENV_SENSOR_GetOutputDataRate	16	static
+SensorTile.box_env_sensors.c:383:9:BSP_ENV_SENSOR_SetOutputDataRate	16	static
+SensorTile.box_env_sensors.c:423:9:BSP_ENV_SENSOR_GetValue	16	static

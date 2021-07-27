@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Targets>
+    <Target>
+        <Name>NUCLEO-L476RG + X-NUCLEO-IKS01A2</Name>
+        <ImportPath>STM32L476RG-Nucleo/STM32L4xx-Nucleo-Project</ImportPath>
+        <DataPath>STM32L476RG-Nucleo</DataPath>
+        <Configuration>IKS01A2</Configuration>
+    </Target>
+    <Target>
+        <Name>NUCLEO-L476RG + X-NUCLEO-IKS01A3</Name>
+        <ImportPath>STM32L476RG-Nucleo/STM32L4xx-Nucleo-Project</ImportPath>
+        <DataPath>STM32L476RG-Nucleo</DataPath>
+        <Configuration>IKS01A3</Configuration>
+    </Target>
+    <Target>
+        <Name>NUCLEO-F401RE + X-NUCLEO-IKS01A2</Name>
+        <ImportPath>STM32F401RE-Nucleo/STM32F4xx-Nucleo-Project</ImportPath>
+        <DataPath>STM32F401RE-Nucleo</DataPath>
+        <Configuration>IKS01A2</Configuration>
+    </Target>
+    <Target>
+        <Name>NUCLEO-F401RE + X-NUCLEO-IKS01A3</Name>
+        <ImportPath>STM32F401RE-Nucleo/STM32F4xx-Nucleo-Project</ImportPath>
+        <DataPath>STM32F401RE-Nucleo</DataPath>
+        <Configuration>IKS01A3</Configuration>
+    </Target>
+    <Target>
+        <Name>SensorTile</Name>
+        <ImportPath>STM32L476RG-SensorTile/SensorTile-Project</ImportPath>
+        <DataPath>STM32L476RG-SensorTile</DataPath>
+        <Configuration>SensorTile-Project</Configuration>
+    </Target>
+    <Target>
+        <Name>SensorTile.box</Name>
+        <ImportPath>STM32L4R9ZI-SensorTile.box/SensorTile.box-Project</ImportPath>
+        <DataPath>STM32L4R9ZI-SensorTile.box</DataPath>
+        <Configuration>SensorTile.box-Project</Configuration>
+    </Target>
+    <Target>
+        <Name>SensorTile.box BLE</Name>
+        <ImportPath>STM32L4R9ZI-SensorTile.box_BLE/SensorTile.box-Project</ImportPath>
+        <DataPath>STM32L4R9ZI-SensorTile.box_BLE</DataPath>
+        <Configuration>SensorTile.box-Project</Configuration>
+    </Target>
+    <Target>
+        <Name>STWIN</Name>
+        <ImportPath>STM32L4R9ZI-STWIN/STWIN-Project</ImportPath>
+        <DataPath>STM32L4R9ZI-STWIN</DataPath>
+        <Configuration>STWIN-Project</Configuration>
+    </Target>
+    <Target>
+        <Name>STWIN BLE</Name>
+        <ImportPath>STM32L4R9ZI-STWIN_BLE/STWIN-Project</ImportPath>
+        <DataPath>STM32L4R9ZI-STWIN_BLE</DataPath>
+        <Configuration>STWIN-Project</Configuration>
+    </Target>
+</Targets>

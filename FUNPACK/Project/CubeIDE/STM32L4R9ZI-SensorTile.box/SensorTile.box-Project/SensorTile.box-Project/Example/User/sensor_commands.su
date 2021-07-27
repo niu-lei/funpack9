@@ -1,0 +1,5 @@
+sensor_commands.c:97:5:SC_Get_Custom_Config	48	static
+sensor_commands.c:184:5:SC_Get_Config_String	40	static
+sensor_commands.c:207:5:SC_Set_Custom_Values	24	static
+sensor_commands.c:248:5:SC_Get_Custom_Values	24	static
+sensor_commands.c:75:5:Handle_Sensor_command	40	static

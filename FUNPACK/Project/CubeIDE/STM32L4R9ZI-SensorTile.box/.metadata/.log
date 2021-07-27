@@ -1,0 +1,10 @@
+!SESSION 2021-06-03 22:50:39.755 -----------------------------------------------
+eclipse.buildId=Version 1.6.1
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import C:\Users\NL\Desktop\sensorbox\Project\CubeIDE\STM32L4R9ZI-SensorTile.box\SensorTile.box-Project -build SensorTile.box-Project/SensorTile.box-Project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data C:\Users\NL\Desktop\sensorbox\Project\CubeIDE\STM32L4R9ZI-SensorTile.box -import C:\Users\NL\Desktop\sensorbox\Project\CubeIDE\STM32L4R9ZI-SensorTile.box\SensorTile.box-Project -build SensorTile.box-Project/SensorTile.box-Project
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-06-03 22:50:56.372
+!MESSAGE Indexed 'SensorTile.box-Project' (69 sources, 167 headers) in 10 sec: 25,633 declarations; 124,053 references; 3 unresolved inclusions; 1 syntax errors; 400 unresolved names (0.27%)

@@ -1,0 +1,1682 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Project>
+    <Version>1.1</Version>
+    <AppVersion>2.8.0.4490</AppVersion>
+    <Location>C:/AlgoBuilder/Example01_Demo</Location>
+    <Toolchain>STM32CubeIDE</Toolchain>
+    <Target>SensorTile.box</Target>
+    <Nodes>
+        <Node>Acceleration_g_1_data</Node>
+        <Node>Acceleration_g_1_data</Node>
+        <Node>Demux_Float_1_out1</Node>
+        <Node>Demux_Float_1_out2</Node>
+        <Node>Demux_Float_1_out3</Node>
+        <Node>Mux_Float_1_out</Node>
+        <Node>Temperature_C_1_data</Node>
+        <Node>Humidity_percent_2_data</Node>
+        <Node>Demux_Float_2_out1</Node>
+        <Node>Demux_Float_2_out2</Node>
+        <Node>Demux_Float_2_out3</Node>
+        <Node>Sensor_Hub_1_out</Node>
+        <Node>Sensor_Hub_1_out</Node>
+        <Node>Quaternions_9X_2_data</Node>
+        <Node>Magnetic_Field_uT_1_data</Node>
+        <Node>Sensor_Hub_1_out</Node>
+        <Node>Sensor_Hub_1_out</Node>
+        <Node>Magnitude_1_out</Node>
+        <Node>Absolute_Value_3_out</Node>
+        <Node>Absolute_Value_1_out</Node>
+        <Node>Absolute_Value_2_out</Node>
+        <Node>Constant_Float_1_out</Node>
+        <Node>Constant_Float_1_out</Node>
+        <Node>Constant_Float_1_out</Node>
+        <Node>Quaternions_9X_2_data</Node>
+        <Node>Less_than_3_out</Node>
+        <Node>Less_than_2_out</Node>
+        <Node>Less_than_1_out</Node>
+        <Node>And_1_out</Node>
+        <Node>Sensor_Hub_1_out</Node>
+        <Node>Calibrated_Magnetic_Field_FX_uT_1_data</Node>
+        <Node>Sensor_Hub_1_out</Node>
+    </Nodes>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>Quaternions</Text>
+        <X>465</X>
+        <Y>75</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>Simple Free Fall Detector</Text>
+        <X>991</X>
+        <Y>184</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>加速度</Text>
+        <X>466</X>
+        <Y>290</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>Example of combination ##varaious values into text##output</Text>
+        <X>721</X>
+        <Y>516</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>湿度</Text>
+        <X>254</X>
+        <Y>547</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>茶壶模型</Text>
+        <X>547</X>
+        <Y>168</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>磁场</Text>
+        <X>259</X>
+        <Y>605</Y>
+    </TextNote>
+    <TextNote>
+        <Name>Text Note</Name>
+        <Text>校准磁场</Text>
+        <X>227</X>
+        <Y>436</Y>
+    </TextNote>
+    <Block>
+        <Name>Less than (&lt;)</Name>
+        <DisplayName>&lt;</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Comparison</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Checks if in1 is lesser than in2. Returns 1 if the condition is true, 0 otherwise.</Description>
+        <X>812</X>
+        <Y>280</Y>
+        <Width>50</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in1</Name>
+                <Description>First operand.</Description>
+                <Node>Absolute_Value_2_out</Node>
+            </Input>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in2</Name>
+                <Description>Second operand.</Description>
+                <Node>Constant_Float_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Less_than_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>if (%in1%[0] &lt; %in2%[0]) %out%[0] = 1; else %out%[0] = 0;</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Less than (&lt;)</Name>
+        <DisplayName>&lt;</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Comparison</LibName>
+        <BlockNumber>3</BlockNumber>
+        <Description>Checks if in1 is lesser than in2. Returns 1 if the condition is true, 0 otherwise.</Description>
+        <X>813</X>
+        <Y>175</Y>
+        <Width>50</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in1</Name>
+                <Description>First operand.</Description>
+                <Node>Absolute_Value_3_out</Node>
+            </Input>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in2</Name>
+                <Description>Second operand.</Description>
+                <Node>Constant_Float_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Less_than_3_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>if (%in1%[0] &lt; %in2%[0]) %out%[0] = 1; else %out%[0] = 0;</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Absolute Value</Name>
+        <DisplayName>Abs</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Math Operations</LibName>
+        <BlockNumber>3</BlockNumber>
+        <Description>Computes the absolute value.</Description>
+        <X>635</X>
+        <Y>182</Y>
+        <Width>60</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in</Name>
+                <Description>Input.</Description>
+                <Node>Demux_Float_1_out1</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Absolute_Value_3_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>%out%[0] = fabs(%in%[0]);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>[Sensor Hub]</Name>
+        <DisplayName>[Sensor Hub]</DisplayName>
+        <Version>3.0</Version>
+        <LibName>Sensor Hub</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Sensor Hub provides links to sensor and algorithms in order to retrieve data from them.</Description>
+        <X>153</X>
+        <Y>236</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs/>
+        <Outputs>
+            <Output>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Sensor Hub handler.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Data Rate Control</Name>
+                <Value>0</Value>
+                <Enum>Timer=0,Accelerometer=1,Gyroscope=2,Offline Data=255</Enum>
+                <Description>Defines the data rate source.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Data Rate</Name>
+                <Value>100</Value>
+                <Min>1</Min>
+                <Max>6666</Max>
+                <Description>Defines the sensor's and algorithm's data rate in Hz. If accelerometer or gyroscope is selected as data rate source, the closest higher available output data rate (ODR) is selected.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Accelerometer Full Scale</Name>
+                <Value>1</Value>
+                <Enum>2 g=0,4 g=1,8 g=2,16 g=3</Enum>
+                <Description>Defines the accelerometer full scale.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Gyroscope Full Scale</Name>
+                <Value>1</Value>
+                <Enum>245 dps=0,500 dps=1,1000 dps=2,2000 dps=3</Enum>
+                <Description>Defines the gyroscope full scale.</Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Sensor_Hub_Handler(&amp;%out%);</Line>
+        </Command>
+        <InitCode>
+            <Line>Sensor_Hub_Init(%Data Rate Control%, %Data Rate%, %Accelerometer Full Scale%, %Gyroscope Full Scale%);</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Absolute Value</Name>
+        <DisplayName>Abs</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Math Operations</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Computes the absolute value.</Description>
+        <X>635</X>
+        <Y>233</Y>
+        <Width>60</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in</Name>
+                <Description>Input.</Description>
+                <Node>Demux_Float_1_out2</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Absolute_Value_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>%out%[0] = fabs(%in%[0]);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Absolute Value</Name>
+        <DisplayName>Abs</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Math Operations</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Computes the absolute value.</Description>
+        <X>635</X>
+        <Y>283</Y>
+        <Width>60</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in</Name>
+                <Description>Input.</Description>
+                <Node>Demux_Float_1_out3</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Absolute_Value_2_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>%out%[0] = fabs(%in%[0]);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Constant (Float)</Name>
+        <DisplayName>%Value%##(Float)</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Constants</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Defines float constant.</Description>
+        <X>703</X>
+        <Y>355</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs/>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Constant value.</Description>
+                <Node>Constant_Float_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>FLOAT</Type>
+                <Name>Value</Name>
+                <Value>0.3</Value>
+                <Description>Constant value.</Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command/>
+        <InitCode>
+            <Line>%out%[0] = %Value%;</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Demux (Float)</Name>
+        <DisplayName>Demux [%Number of outputs%]##(Float)</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Other</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Float demultiplexer. Creates individual scalar outputs from input array.</Description>
+        <X>475</X>
+        <Y>590</Y>
+        <Width>60</Width>
+        <Height>45</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>%Number of outputs%</Size>
+                <Name>in1</Name>
+                <Description>Input.</Description>
+                <Node>Magnetic_Field_uT_1_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <VariableCount>%Number of outputs%</VariableCount>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out1</Name>
+                <Description>Output 1.</Description>
+                <Node>Demux_Float_2_out1</Node>
+            </Output>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out2</Name>
+                <Description>Output 2.</Description>
+                <Node>Demux_Float_2_out2</Node>
+            </Output>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out3</Name>
+                <Description>Output 3.</Description>
+                <Node>Demux_Float_2_out3</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of outputs</Name>
+                <Value>3</Value>
+                <Min>2</Min>
+                <Max>16</Max>
+                <Description></Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command/>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Magnitude</Name>
+        <DisplayName>Magnitude</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Vector Operations</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Calculates magnidude of the input vector.</Description>
+        <X>464</X>
+        <Y>430</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>3</Size>
+                <Name>in</Name>
+                <Description>Input vector.</Description>
+                <Node>Calibrated_Magnetic_Field_FX_uT_1_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Magnitude.</Description>
+                <Node>Magnitude_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>%out%[0] = sqrt(%in%[0]*%in%[0] + %in%[1]*%in%[1] + %in%[2]*%in%[2]);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Less than (&lt;)</Name>
+        <DisplayName>&lt;</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Comparison</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Checks if in1 is lesser than in2. Returns 1 if the condition is true, 0 otherwise.</Description>
+        <X>812</X>
+        <Y>226</Y>
+        <Width>50</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in1</Name>
+                <Description>First operand.</Description>
+                <Node>Absolute_Value_1_out</Node>
+            </Input>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>1</Size>
+                <Name>in2</Name>
+                <Description>Second operand.</Description>
+                <Node>Constant_Float_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>Less_than_2_out</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>if (%in1%[0] &lt; %in2%[0]) %out%[0] = 1; else %out%[0] = 0;</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Demux (Float)</Name>
+        <DisplayName>Demux [%Number of outputs%]##(Float)</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Other</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Float demultiplexer. Creates individual scalar outputs from input array.</Description>
+        <X>476</X>
+        <Y>233</Y>
+        <Width>60</Width>
+        <Height>45</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>%Number of outputs%</Size>
+                <Name>in1</Name>
+                <Description>Input.</Description>
+                <Node>Acceleration_g_1_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <VariableCount>%Number of outputs%</VariableCount>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out1</Name>
+                <Description>Output 1.</Description>
+                <Node>Demux_Float_1_out1</Node>
+            </Output>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out2</Name>
+                <Description>Output 2.</Description>
+                <Node>Demux_Float_1_out2</Node>
+            </Output>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>out3</Name>
+                <Description>Output 3.</Description>
+                <Node>Demux_Float_1_out3</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of outputs</Name>
+                <Value>3</Value>
+                <Min>2</Min>
+                <Max>16</Max>
+                <Description></Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command/>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>And</Name>
+        <DisplayName>AND</DisplayName>
+        <Version>2.0</Version>
+        <LibName>Logic Operators</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Make logical AND.</Description>
+        <X>921</X>
+        <Y>224</Y>
+        <Width>60</Width>
+        <Height>45</Height>
+        <Inputs>
+            <VariableCount>%Number of inputs%</VariableCount>
+            <Input>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>in1</Name>
+                <Description>First operand.</Description>
+                <Node>Less_than_3_out</Node>
+            </Input>
+            <Input>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>in2</Name>
+                <Description>Second operand.</Description>
+                <Node>Less_than_2_out</Node>
+            </Input>
+            <Input>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>in3</Name>
+                <Description>Input 3.</Description>
+                <Node>Less_than_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>INT</Type>
+                <Size>1</Size>
+                <Name>out</Name>
+                <Description>Result.</Description>
+                <Node>And_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of inputs</Name>
+                <Value>3</Value>
+                <Min>2</Min>
+                <Max>16</Max>
+                <Description></Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>%out%[0] = %in1%[0] &amp;&amp; %in2%[0];</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Magnetic Field [uT]</Name>
+        <DisplayName>Magnetic Field##[uT]</DisplayName>
+        <Version>2.1</Version>
+        <LibName>Sensor Hub</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Retrieve the magnetometer data.</Description>
+        <Dependency>Magnetometer</Dependency>
+        <X>316</X>
+        <Y>592</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>3</Size>
+                <Name>data</Name>
+                <Description>Magnetometer data (magnetic fiels) in microTesla.</Description>
+                <Node>Magnetic_Field_uT_1_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>Magneto_Sensor_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>Magneto_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Humidity [percent]</Name>
+        <DisplayName>Humidity##[percent]</DisplayName>
+        <Version>2.1</Version>
+        <LibName>Sensor Hub</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Retrieve the humidity sensor data.</Description>
+        <Dependency>HumiditySensor</Dependency>
+        <X>316</X>
+        <Y>539</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>data</Name>
+                <Description>Humidity sensor data (relative humidity) in percentage.</Description>
+                <Node>Humidity_percent_2_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>Humidity_Sensor_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>Humidity_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Temperature [°C]</Name>
+        <DisplayName>Temperature##[°C]</DisplayName>
+        <Version>2.1</Version>
+        <LibName>Sensor Hub</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Retrieve the temperature sensor data.</Description>
+        <Dependency>TemperatureSensor</Dependency>
+        <X>317</X>
+        <Y>483</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>data</Name>
+                <Description>Temperature sensor data (ambient temperature) in Celsius degrees.</Description>
+                <Node>Temperature_C_1_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>Temperature_Sensor_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>Temperature_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Acceleration [g]</Name>
+        <DisplayName>Acceleration##[g]</DisplayName>
+        <Version>2.1</Version>
+        <LibName>Sensor Hub</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Retrieve the accelerometer data.</Description>
+        <Dependency>Accelerometer</Dependency>
+        <X>318</X>
+        <Y>236</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>3</Size>
+                <Name>data</Name>
+                <Description>Accelerometer data (acceleration) in g unit.</Description>
+                <Node>Acceleration_g_1_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>Accelero_Sensor_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>Accelero_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Mux (Float)</Name>
+        <DisplayName>Mux [%Number of inputs%]##(Float)</DisplayName>
+        <Version>1.0</Version>
+        <LibName>Other</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Float multiplexer. Creates array from scalar inputs.</Description>
+        <X>640</X>
+        <Y>488</Y>
+        <Width>60</Width>
+        <Height>90</Height>
+        <Inputs>
+            <VariableCount>%Number of inputs%</VariableCount>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in1</Name>
+                <Description>Input 1.</Description>
+                <Node>Magnitude_1_out</Node>
+            </Input>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in2</Name>
+                <Description>Input 2.</Description>
+                <Node>Temperature_C_1_data</Node>
+            </Input>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in3</Name>
+                <Description>Input 3.</Description>
+                <Node>Humidity_percent_2_data</Node>
+            </Input>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in4</Name>
+                <Description>Input 4.</Description>
+                <Node>Demux_Float_2_out1</Node>
+            </Input>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in5</Name>
+                <Description>Input 5.</Description>
+                <Node>Demux_Float_2_out2</Node>
+            </Input>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>1</Size>
+                <Name>in6</Name>
+                <Description>Input 6.</Description>
+                <Node>Demux_Float_2_out3</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>%Number of inputs%</Size>
+                <Name>out</Name>
+                <Description>Output.</Description>
+                <Node>Mux_Float_1_out</Node>
+            </Output>
+        </Outputs>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of inputs</Name>
+                <Value>6</Value>
+                <Min>2</Min>
+                <Max>16</Max>
+                <Description></Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command/>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Calibrated Magnetic Field FX [uT]</Name>
+        <DisplayName>Cal. Magnetic Field##[uT]</DisplayName>
+        <Version>1.3</Version>
+        <LibName>MotionFX</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Retrieves the calibrated magnetometer data, with Hard Iron correction. Sample rate for this algorithm is 100Hz, Data Rate of the Sensor Hub must be set equal or higher.</Description>
+        <Dependency>Accelerometer,Gyroscope,Magnetometer</Dependency>
+        <X>317</X>
+        <Y>430</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>3</Size>
+                <Name>data</Name>
+                <Description>Calibrated magnetometer data in microtesla unit.</Description>
+                <Node>Calibrated_Magnetic_Field_FX_uT_1_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>MagnetoCal_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>MotionFX_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Quaternions 9X</Name>
+        <DisplayName>Quaternions 9X</DisplayName>
+        <Version>1.3</Version>
+        <LibName>MotionFX</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Retrieves the oriantion data in the magnetic North referential. The output data is an orientation in quaternion format. The orinatation is computed usign accelerometer, gyroscope and magnetometer sensor. Sample rate for this algorithm is 100Hz, Data Rate of the Sensor Hub must be set equal or higher.</Description>
+        <Dependency>Accelerometer,Gyroscope,Magnetometer</Dependency>
+        <X>318</X>
+        <Y>129</Y>
+        <Width>100</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VOID</Type>
+                <Size>1</Size>
+                <Name>SensorHubHandle</Name>
+                <Description>Connect to Sensor Hub output.</Description>
+                <Node>Sensor_Hub_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs>
+            <Output>
+                <Type>FLOAT</Type>
+                <Size>4</Size>
+                <Name>data</Name>
+                <Description>Oriantation data in quaternion format.</Description>
+                <Node>Quaternions_9X_2_data</Node>
+            </Output>
+        </Outputs>
+        <Properties/>
+        <Memory/>
+        <Command>
+            <Line>Quaternions9X_GetData(%SensorHubHandle%, %data%);</Line>
+        </Command>
+        <InitCode>
+            <Line>MotionFX_Init();</Line>
+        </InitCode>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Logic Analyzer</Name>
+        <DisplayName>Logic##Analyzer</DisplayName>
+        <Version>2.0</Version>
+        <LibName>Display</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Displays up to eight logic values in real-time chart. The X-axis represents time, Y-axis is logic state (0 or 1).</Description>
+        <X>1033</X>
+        <Y>225</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>INT</Type>
+                <Size>%Number of Channels%</Size>
+                <Name>in</Name>
+                <Description>Input data to display (y-axis value). The input data size has to match with number of channels.</Description>
+                <Node>And_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs/>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of Channels</Name>
+                <Value>1</Value>
+                <Min>1</Min>
+                <Max>16</Max>
+                <Description>Defines number of channels to plot. Value must be from 1 to 8.</Description>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Logic Analyzer Name</Name>
+                <Value>Logic##Analyzer</Value>
+                <Description>Label of the logic analyzer.</Description>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 1 Name</Name>
+                <Value>AND</Value>
+                <Description>Label of the channel 1.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>1</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 2 Name</Name>
+                <Value>Ch 2</Value>
+                <Description>Label of the channel 2.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>2</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 3 Name</Name>
+                <Value>Ch 3</Value>
+                <Description>Label of the channel 3.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>3</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 4 Name</Name>
+                <Value>Ch 4</Value>
+                <Description>Label of the channel 4.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>4</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 5 Name</Name>
+                <Value>Ch 5</Value>
+                <Description>Label of the channel 5.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>5</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 6 Name</Name>
+                <Value>Ch 6</Value>
+                <Description>Label of the channel 6.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>6</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 7 Name</Name>
+                <Value>Ch 7</Value>
+                <Description>Label of the channel 7.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>7</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 8 Name</Name>
+                <Value>Ch 8</Value>
+                <Description>Label of the channel 8.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>8</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 9 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 9.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>9</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 10 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 10.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>10</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 11 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 11.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>11</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 12 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 12.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>12</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 13 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 13.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>13</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 14 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 14.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>14</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 15 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 15.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>15</DisplayCondition>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Channel 16 Name</Name>
+                <Value></Value>
+                <Description>Label of the channel 16.</Description>
+                <DisplayDependency>Number of Channels</DisplayDependency>
+                <DisplayCondition>16</DisplayCondition>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Display_Update(%in%);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Graph</Name>
+        <DisplayName>Graph</DisplayName>
+        <Version>2.2</Version>
+        <LibName>Display</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Graph. Displays up to six real-time curves. The X-axis represents time, Y-axis is value.</Description>
+        <X>464</X>
+        <Y>319</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>%Number of Curves%</Size>
+                <Name>in</Name>
+                <Description>Input data to plot (y-axis value). The input data size has to match with number of curves.</Description>
+                <Node>Acceleration_g_1_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs/>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Data Type</Name>
+                <Value>Custom</Value>
+                <Enum>Custom=Custom,Accelerometer=Accelerometer,Gyroscope=Gyroscope,Magnetometer=Magnetometer</Enum>
+                <Description>Enables easy setting of waveform names and units to apropriate values.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of Curves</Name>
+                <Value>3</Value>
+                <Min>1</Min>
+                <Max>6</Max>
+                <Description>Defines number of curves to plot. Value must be from 1 to 6.</Description>
+                <DataTypeValues>3,3,3,3</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Graph Name</Name>
+                <Value>Acceleration</Value>
+                <Description>Label of the graph.</Description>
+                <DataTypeValues>Graph,Acceleration,Angular##Rate,Magnetic##Field</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 1 Name</Name>
+                <Value>X axis</Value>
+                <Description>Name of the waveform 1.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>1</DisplayCondition>
+                <DataTypeValues>Waveform 1,accX,gyroX,magnX</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 2 Name</Name>
+                <Value>Y axis</Value>
+                <Description>Name of the waveform 2.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>2</DisplayCondition>
+                <DataTypeValues>Waveform 2,accY,gyroY,magnY</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 3 Name</Name>
+                <Value>Z axis</Value>
+                <Description>Name of the waveform 3.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>3</DisplayCondition>
+                <DataTypeValues>Waveform 3,accZ,gyroZ,magnZ</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 4 Name</Name>
+                <Value>Waveform 4</Value>
+                <Description>Name of the waveform 4.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>4</DisplayCondition>
+                <DataTypeValues>Waveform 4,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 5 Name</Name>
+                <Value>Waveform 5</Value>
+                <Description>Name of the waveform 5.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>5</DisplayCondition>
+                <DataTypeValues>Waveform 5,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 6 Name</Name>
+                <Value>Waveform 6</Value>
+                <Description>Name of the waveform 6.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>6</DisplayCondition>
+                <DataTypeValues>Waveform 6,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit Name</Name>
+                <Value>[g]</Value>
+                <Description>Name of graph units.</Description>
+                <DataTypeValues>,g,dps,uT</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Zero axis position</Name>
+                <Value>3</Value>
+                <Enum>Bottom=1,Middle=3,Top=5</Enum>
+                <Description>Horizontal position of zero axis.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Auto-scale</Name>
+                <Value>0</Value>
+                <Enum>OFF=0,ON=1</Enum>
+                <Description>Auto-scale of Y axis enabled.</Description>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Full Scale</Name>
+                <Value>1</Value>
+                <Description>Axis Y full scale. (Format: 2.5 or -1.5:3)</Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Display_Update(%in%);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Graph</Name>
+        <DisplayName>Graph</DisplayName>
+        <Version>2.2</Version>
+        <LibName>Display</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Graph. Displays up to six real-time curves. The X-axis represents time, Y-axis is value.</Description>
+        <X>467</X>
+        <Y>100</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>%Number of Curves%</Size>
+                <Name>in</Name>
+                <Description>Input data to plot (y-axis value). The input data size has to match with number of curves.</Description>
+                <Node>Quaternions_9X_2_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs/>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Data Type</Name>
+                <Value>Custom</Value>
+                <Enum>Custom=Custom,Accelerometer=Accelerometer,Gyroscope=Gyroscope,Magnetometer=Magnetometer</Enum>
+                <Description>Enables easy setting of waveform names and units to apropriate values.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of Curves</Name>
+                <Value>4</Value>
+                <Min>1</Min>
+                <Max>6</Max>
+                <Description>Defines number of curves to plot. Value must be from 1 to 6.</Description>
+                <DataTypeValues>3,3,3,3</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Graph Name</Name>
+                <Value>Quaternions</Value>
+                <Description>Label of the graph.</Description>
+                <DataTypeValues>Graph,Acceleration,Angular##Rate,Magnetic##Field</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 1 Name</Name>
+                <Value>q1</Value>
+                <Description>Name of the waveform 1.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>1</DisplayCondition>
+                <DataTypeValues>Waveform 1,accX,gyroX,magnX</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 2 Name</Name>
+                <Value>q2</Value>
+                <Description>Name of the waveform 2.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>2</DisplayCondition>
+                <DataTypeValues>Waveform 2,accY,gyroY,magnY</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 3 Name</Name>
+                <Value>q3</Value>
+                <Description>Name of the waveform 3.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>3</DisplayCondition>
+                <DataTypeValues>Waveform 3,accZ,gyroZ,magnZ</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 4 Name</Name>
+                <Value>q4</Value>
+                <Description>Name of the waveform 4.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>4</DisplayCondition>
+                <DataTypeValues>Waveform 4,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 5 Name</Name>
+                <Value>Waveform 5</Value>
+                <Description>Name of the waveform 5.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>5</DisplayCondition>
+                <DataTypeValues>Waveform 5,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Waveform 6 Name</Name>
+                <Value>Waveform 6</Value>
+                <Description>Name of the waveform 6.</Description>
+                <DisplayDependency>Number of Curves</DisplayDependency>
+                <DisplayCondition>6</DisplayCondition>
+                <DataTypeValues>Waveform 6,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit Name</Name>
+                <Value></Value>
+                <Description>Name of graph units.</Description>
+                <DataTypeValues>,g,dps,uT</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Zero axis position</Name>
+                <Value>3</Value>
+                <Enum>Bottom=1,Middle=3,Top=5</Enum>
+                <Description>Horizontal position of zero axis.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Auto-scale</Name>
+                <Value>0</Value>
+                <Enum>OFF=0,ON=1</Enum>
+                <Description>Auto-scale of Y axis enabled.</Description>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Full Scale</Name>
+                <Value>1</Value>
+                <Description>Axis Y full scale. (Format: 2.5 or -1.5:3)</Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Display_Update(%in%);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Value</Name>
+        <DisplayName>Value</DisplayName>
+        <Version>2.2</Version>
+        <LibName>Display</LibName>
+        <BlockNumber>1</BlockNumber>
+        <Description>Displays up to eight integer values.</Description>
+        <X>802</X>
+        <Y>594</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>VARIANT</Type>
+                <Size>%Number of Values%</Size>
+                <Name>in</Name>
+                <Description>Input data to display. The input data size has to match with number of values.</Description>
+                <Node>Mux_Float_1_out</Node>
+            </Input>
+        </Inputs>
+        <Outputs/>
+        <Properties>
+            <Property>
+                <Type>INT</Type>
+                <Name>Data Type</Name>
+                <Value>Custom</Value>
+                <Enum>Custom=Custom,Accelerometer=Accelerometer,Gyroscope=Gyroscope,Magnetometer=Magnetometer,Acc and Gyro=Acc and Gyro</Enum>
+                <Description>Enables easy setting of value names and units to apropriate values.</Description>
+            </Property>
+            <Property>
+                <Type>INT</Type>
+                <Name>Number of Values</Name>
+                <Value>6</Value>
+                <Min>1</Min>
+                <Max>8</Max>
+                <Description>Defines number of values to display. Value must be from 1 to 8.</Description>
+                <DataTypeValues>8,3,3,3,6</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Window Name</Name>
+                <Value>Output##Value</Value>
+                <Description>Label of the values window.</Description>
+                <DataTypeValues>Values,Acceleration,Angular##Rate,Magnetic##Field,Accelero##and Gyro</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 1 Name</Name>
+                <Value>Magnetic Field</Value>
+                <Description>Label of the value 1.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>1</DisplayCondition>
+                <DataTypeValues>Value 1,accX,gyroX,magnX,accX</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 2 Name</Name>
+                <Value>Temperature</Value>
+                <Description>Label of the value 2.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>2</DisplayCondition>
+                <DataTypeValues>Value 2,accY,gyroY,magnY,accY</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 3 Name</Name>
+                <Value>Humidity</Value>
+                <Description>Label of the value 3.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>3</DisplayCondition>
+                <DataTypeValues>Value 3,accZ,gyroZ,magnZ,accZ</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 4 Name</Name>
+                <Value>Mag X</Value>
+                <Description>Label of the value 4.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>4</DisplayCondition>
+                <DataTypeValues>Value 4,,,,gyroX</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 5 Name</Name>
+                <Value>Mag Y</Value>
+                <Description>Label of the value 5.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>5</DisplayCondition>
+                <DataTypeValues>Value 5,,,,gyroY</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 6 Name</Name>
+                <Value>Mag Z</Value>
+                <Description>Label of the value 6.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>6</DisplayCondition>
+                <DataTypeValues>Value 6,,,,gyroZ</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 7 Name</Name>
+                <Value>Value 7</Value>
+                <Description>Label of the value 7.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>7</DisplayCondition>
+                <DataTypeValues>Value 7,,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Value 8 Name</Name>
+                <Value>Value 8</Value>
+                <Description>Label of the value 8.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>8</DisplayCondition>
+                <DataTypeValues>Value 8,,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 1 Name</Name>
+                <Value>[uT]</Value>
+                <Description>Unit of the value 1.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>1</DisplayCondition>
+                <DataTypeValues>,g,dps,uT,g</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 2 Name</Name>
+                <Value>[C]</Value>
+                <Description>Unit of the value 2.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>2</DisplayCondition>
+                <DataTypeValues>,g,dps,uT,g</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 3 Name</Name>
+                <Value>[percent]</Value>
+                <Description>Unit of the value 3.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>3</DisplayCondition>
+                <DataTypeValues>,g,dps,uT,g</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 4 Name</Name>
+                <Value>[uT]</Value>
+                <Description>Unit of the value 4.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>4</DisplayCondition>
+                <DataTypeValues>,,,,dps</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 5 Name</Name>
+                <Value>[uT]</Value>
+                <Description>Unit of the value 5.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>5</DisplayCondition>
+                <DataTypeValues>,,,,dps</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 6 Name</Name>
+                <Value>[uT]</Value>
+                <Description>Unit of the value 6.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>6</DisplayCondition>
+                <DataTypeValues>,,,,dps</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 7 Name</Name>
+                <Value>Unit 7</Value>
+                <Description>Unit of the value 7.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>7</DisplayCondition>
+                <DataTypeValues>,,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Unit 8 Name</Name>
+                <Value>Unit 8</Value>
+                <Description>Unit of the value 8.</Description>
+                <DisplayDependency>Number of Values</DisplayDependency>
+                <DisplayCondition>8</DisplayCondition>
+                <DataTypeValues>,,,,</DataTypeValues>
+                <DataTypeEnabled>1,0,0,0,0</DataTypeEnabled>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Display_Update(%in%);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+    <Block>
+        <Name>Fusion</Name>
+        <DisplayName>Fusion</DisplayName>
+        <Version>2.1</Version>
+        <LibName>Display</LibName>
+        <BlockNumber>2</BlockNumber>
+        <Description>Displays 3d visualization.</Description>
+        <X>463</X>
+        <Y>157</Y>
+        <Width>80</Width>
+        <Height>40</Height>
+        <Inputs>
+            <Input>
+                <Type>FLOAT</Type>
+                <Size>4</Size>
+                <Name>in</Name>
+                <Description>Input data to display.</Description>
+                <Node>Quaternions_9X_2_data</Node>
+            </Input>
+        </Inputs>
+        <Outputs/>
+        <Properties>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Window Name</Name>
+                <Value>Teapot</Value>
+                <Description>Label of the window.</Description>
+            </Property>
+            <Property>
+                <Type>STRING</Type>
+                <Name>Model Name</Name>
+                <Value>Teapot</Value>
+                <Enum>Teapot=Teapot,Nucleo Board=Nucleo Board,Car=Car</Enum>
+                <Description>Name of model which will be used for visualization.</Description>
+            </Property>
+        </Properties>
+        <Memory/>
+        <Command>
+            <Line>Display_Update(%in%);</Line>
+        </Command>
+        <InitCode/>
+        <Function/>
+    </Block>
+</Project>

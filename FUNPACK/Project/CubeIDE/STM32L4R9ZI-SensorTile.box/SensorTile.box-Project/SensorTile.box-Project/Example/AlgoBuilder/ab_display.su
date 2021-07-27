@@ -1,0 +1,8 @@
+ab_display.c:105:6:Display_Update	32	static
+ab_display.c:159:6:Datalog_Init	12	static
+ab_display.c:174:6:Datalog_Update	320	static
+ab_display.c:211:6:Datalog_Open	112	static
+ab_display.c:271:6:Datalog_Close	8	static
+ab_display.c:278:6:Datalog_Sync_Handler	16	static
+ab_display.c:292:6:Datalog_Set_RTC_Handle	0	static
+ab_display.c:297:7:get_fattime	40	static

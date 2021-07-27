@@ -1,0 +1,15 @@
+SensorTile.box.c:144:9:BSP_ADC1_Initialization	56	static
+SensorTile.box.c:247:6:HAL_ADC_MspInit	8	static
+SensorTile.box.c:257:6:HAL_ADC_MspDeInit	0	static
+SensorTile.box.c:269:9:BSP_ADC1_DeInitialization	8	static
+SensorTile.box.c:290:10:BSP_GetVersion	0	static
+SensorTile.box.c:303:6:BSP_LED_Init	56	static
+SensorTile.box.c:334:6:BSP_LED_DeInit	0	static
+SensorTile.box.c:347:6:BSP_LED_On	0	static
+SensorTile.box.c:364:6:BSP_LED_Off	0	static
+SensorTile.box.c:381:6:BSP_LED_Toggle	0	static
+SensorTile.box.c:397:6:BSP_PB_Init	48	static
+SensorTile.box.c:440:6:BSP_PB_DeInit	8	static
+SensorTile.box.c:455:10:BSP_PB_GetState	8	static
+SensorTile.box.c:465:10:BSP_PowerButton_Init	48	static
+SensorTile.box.c:492:10:BSP_PowerButton_DeInit	8	static
